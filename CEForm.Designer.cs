@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
+            CEmenuStrip = new MenuStrip();
             FileToolStripMenuItem = new ToolStripMenuItem();
             NewToolStripMenuItem = new ToolStripMenuItem();
             SaveToolStripMenuItem = new ToolStripMenuItem();
@@ -67,18 +67,19 @@
             forceReloadEngDataToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
+            listBox1 = new ListBox();
+            CEmenuStrip.SuspendLayout();
             SuspendLayout();
             // 
-            // menuStrip1
+            // CEmenuStrip
             // 
-            menuStrip1.BackColor = Color.Gray;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { FileToolStripMenuItem, consistToolStripMenuItem, engToolStripMenuItem, replaceToolStripMenuItem, viewToolStripMenuItem, dViewToolStripMenuItem, settingsToolStripMenuItem, helpToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1184, 24);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            CEmenuStrip.BackColor = Color.Gray;
+            CEmenuStrip.Items.AddRange(new ToolStripItem[] { FileToolStripMenuItem, consistToolStripMenuItem, engToolStripMenuItem, replaceToolStripMenuItem, viewToolStripMenuItem, dViewToolStripMenuItem, settingsToolStripMenuItem, helpToolStripMenuItem });
+            CEmenuStrip.Location = new Point(0, 0);
+            CEmenuStrip.Name = "CEmenuStrip";
+            CEmenuStrip.Size = new Size(1184, 24);
+            CEmenuStrip.TabIndex = 0;
+            CEmenuStrip.Text = "menuStrip1";
             // 
             // FileToolStripMenuItem
             // 
@@ -93,21 +94,21 @@
             // 
             NewToolStripMenuItem.Name = "NewToolStripMenuItem";
             NewToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.N;
-            NewToolStripMenuItem.Size = new Size(180, 22);
+            NewToolStripMenuItem.Size = new Size(137, 22);
             NewToolStripMenuItem.Text = "New";
             // 
             // SaveToolStripMenuItem
             // 
             SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
             SaveToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.S;
-            SaveToolStripMenuItem.Size = new Size(180, 22);
+            SaveToolStripMenuItem.Size = new Size(137, 22);
             SaveToolStripMenuItem.Text = "Save";
             // 
             // ExitToolStripMenuItem
             // 
             ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
             ExitToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.X;
-            ExitToolStripMenuItem.Size = new Size(180, 22);
+            ExitToolStripMenuItem.Size = new Size(137, 22);
             ExitToolStripMenuItem.Text = "Exit";
             ExitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
@@ -214,37 +215,37 @@
             // consistsListsToolStripMenuItem
             // 
             consistsListsToolStripMenuItem.Name = "consistsListsToolStripMenuItem";
-            consistsListsToolStripMenuItem.Size = new Size(180, 22);
+            consistsListsToolStripMenuItem.Size = new Size(148, 22);
             consistsListsToolStripMenuItem.Text = "Consists Lists";
             // 
             // engList1ToolStripMenuItem
             // 
             engList1ToolStripMenuItem.Name = "engList1ToolStripMenuItem";
-            engList1ToolStripMenuItem.Size = new Size(180, 22);
+            engList1ToolStripMenuItem.Size = new Size(148, 22);
             engList1ToolStripMenuItem.Text = "Eng List 1";
             // 
             // engList2ToolStripMenuItem
             // 
             engList2ToolStripMenuItem.Name = "engList2ToolStripMenuItem";
-            engList2ToolStripMenuItem.Size = new Size(180, 22);
+            engList2ToolStripMenuItem.Size = new Size(148, 22);
             engList2ToolStripMenuItem.Text = "Eng List 2";
             // 
             // consistsUnitsToolStripMenuItem
             // 
             consistsUnitsToolStripMenuItem.Name = "consistsUnitsToolStripMenuItem";
-            consistsUnitsToolStripMenuItem.Size = new Size(180, 22);
+            consistsUnitsToolStripMenuItem.Size = new Size(148, 22);
             consistsUnitsToolStripMenuItem.Text = "Consists Units";
             // 
             // engViewToolStripMenuItem
             // 
             engViewToolStripMenuItem.Name = "engViewToolStripMenuItem";
-            engViewToolStripMenuItem.Size = new Size(180, 22);
+            engViewToolStripMenuItem.Size = new Size(148, 22);
             engViewToolStripMenuItem.Text = "Eng View";
             // 
             // conViewToolStripMenuItem
             // 
             conViewToolStripMenuItem.Name = "conViewToolStripMenuItem";
-            conViewToolStripMenuItem.Size = new Size(180, 22);
+            conViewToolStripMenuItem.Size = new Size(148, 22);
             conViewToolStripMenuItem.Text = "Con View";
             // 
             // dViewToolStripMenuItem
@@ -319,8 +320,18 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Size = new Size(107, 22);
             aboutToolStripMenuItem.Text = "About";
+            // 
+            // listBox1
+            // 
+            listBox1.BackColor = Color.FromArgb(128, 255, 255);
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(0, 27);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(184, 409);
+            listBox1.TabIndex = 1;
             // 
             // CEForm
             // 
@@ -328,20 +339,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1184, 761);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(listBox1);
+            Controls.Add(CEmenuStrip);
+            MainMenuStrip = CEmenuStrip;
             MdiChildrenMinimizedAnchorBottom = false;
             Name = "CEForm";
             Text = "CEForm";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            CEmenuStrip.ResumeLayout(false);
+            CEmenuStrip.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
+        private MenuStrip CEmenuStrip;
         private ToolStripMenuItem FileToolStripMenuItem;
         private ToolStripMenuItem NewToolStripMenuItem;
         private ToolStripMenuItem SaveToolStripMenuItem;
@@ -380,5 +392,6 @@
         private ToolStripMenuItem forceReloadEngDataToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private ListBox listBox1;
     }
 }
